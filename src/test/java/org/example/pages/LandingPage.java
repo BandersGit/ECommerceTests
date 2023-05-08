@@ -21,7 +21,6 @@ public class LandingPage extends BasePage {
     }
 
     public RegisterPage followLinkToRegisterPage(){
-
         hover(loginPageLink);
         click(registerPageLink);
         return new RegisterPage();

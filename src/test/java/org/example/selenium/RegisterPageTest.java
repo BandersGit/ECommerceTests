@@ -1,6 +1,5 @@
 package org.example.selenium;
 
-import org.example.pages.LoginPage;
 import org.example.pages.RegisterPage;
 import org.testng.annotations.Test;
 
