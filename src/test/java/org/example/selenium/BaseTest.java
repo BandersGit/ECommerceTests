@@ -1,9 +1,35 @@
 package org.example.selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.example.pages.LandingPage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.*;
+
 public class BaseTest {
 
-    public void test(){
-        System.out.println("hej");
+    private WebDriver driver;
+    private final static String baseUrl = "https://ecommerce-playground.lambdatest.io/";
+    protected static LandingPage landingPage;
+    @BeforeClass
+    public void setup(){
+        WebDriverManager.chromedriver().setup();
     }
 
+    @BeforeMethod
+    public void init(){
+        ChromeOptions option = new ChromeOptions();
+        option.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(option);
+        driver.manage().window().maximize();
+        driver.get(baseUrl);
+        landingPage = new LandingPage();
+        landingPage.setDriver(driver);
+    }
+
+    @AfterTest
+    public void tearDown(){
+        driver.quit();
+    }
 }
