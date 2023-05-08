@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class BasePage {
-    private static WebDriver driver;
+    protected static WebDriver driver;
 
     public void setDriver(WebDriver driver){
         this.driver = driver;

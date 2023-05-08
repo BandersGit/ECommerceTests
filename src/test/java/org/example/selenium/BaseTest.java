@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 
 public class BaseTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
     private final static String baseUrl = "https://ecommerce-playground.lambdatest.io/";
     protected static LandingPage landingPage;
     @BeforeClass
