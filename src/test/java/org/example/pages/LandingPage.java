@@ -3,6 +3,9 @@ package org.example.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LandingPage extends BasePage {
 
@@ -10,7 +13,7 @@ public class LandingPage extends BasePage {
     private final By registerPageLink = By.linkText("Register");
     private final By logOutSuccessPageLink = By.linkText("Logout");
     private final By searchBar = By.name("search");
-    private final By firstProduct = By.className("title");
+    private By firstProduct;
 
     public LoginPage followLinkToLoginPage (){
         click(loginPageLink);
@@ -29,9 +32,12 @@ public class LandingPage extends BasePage {
         return new LogOutSuccessPage();
     }
 
-    public void productSearch(String input){
+    public ProductPage productSearch(String input) throws InterruptedException {
         click(searchBar);
         sendKeys(searchBar, input);
+        firstProduct = By.linkText(input);
+        Thread.sleep(2000);
         click(firstProduct);
+        return new ProductPage();
     }
 }
