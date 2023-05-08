@@ -1,4 +1,4 @@
 package org.example.pages;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 }
