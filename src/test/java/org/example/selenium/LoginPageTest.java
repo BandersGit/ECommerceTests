@@ -1,4 +1,4 @@
 package org.example.selenium;
 
-public class LoginPageTest extend BaseTest {
+public class LoginPageTest extends BaseTest {
 }
