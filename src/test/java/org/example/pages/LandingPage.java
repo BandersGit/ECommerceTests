@@ -1,6 +1,8 @@
 package org.example.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class LandingPage extends BasePage {
 
@@ -13,6 +15,8 @@ public class LandingPage extends BasePage {
     }
 
     public RegisterPage followLinkToRegisterPage(){
+
+        hover(loginPageLink);
         click(registerPageLink);
         return new RegisterPage();
     }
