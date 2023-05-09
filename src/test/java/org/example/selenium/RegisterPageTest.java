@@ -7,13 +7,12 @@ import java.util.Random;
 
 public class RegisterPageTest extends BaseTest {
 
-    Random rand = new Random();
-    int newUserNum;
-    //test follow link to Register Page
+    String registerNum;
+
     @Test
     public void register() {
         RegisterPage registerPage = landingPage.followLinkToRegisterPage();
 
-        newUserNum = rand.nextInt();
+        registerNum = registerPage.generateRegisterNumber();
     }
 }
