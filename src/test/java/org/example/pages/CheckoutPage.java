@@ -9,9 +9,7 @@ public class CheckoutPage extends BasePage {
     private final By addressOneField = By.id("input-payment-address-1");
     private final By cityField = By.id("input-payment-city");
     private final By postCodeField = By.id("input-payment-postcode");
-
     private final By checkAgreeTermsAndConditions = By.id("input-agree");
-
     private final By buttonContinue = By.id("button-save");
 
     public void typeIntoFirstNameField(String input){
