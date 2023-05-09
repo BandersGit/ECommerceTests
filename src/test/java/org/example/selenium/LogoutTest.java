@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class LogoutTest extends BaseTest {
 
     @Test
-    public void login_whenInputValidAccountDetails_shouldLogin() {
+    public void logout_whenLoggedIn_shouldLogout() {
         //Given
         String email = "a@b.cd";
         String password = "abcd";
