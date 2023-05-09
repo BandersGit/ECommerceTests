@@ -1,15 +1,17 @@
 package org.example.selenium;
 
 import org.example.pages.LoginPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
-public class LoginPageTest extends BaseTest {
+public class LoginTest extends BaseTest {
 
     @Test
     public void login_whenInputValidAccountDetails_shouldLogin(){
         //Given
-        String email = "aName";
-        String password = "aPassword";
+        String email = "a@b.cd";
+        String password = "abcd";
 
         //When
         LoginPage loginPage = landingPage.followLinkToLoginPage();
@@ -17,5 +19,9 @@ public class LoginPageTest extends BaseTest {
         loginPage.enterPassword(password);
         loginPage.clickLoginButton();
 
+        String expectedTitle = driver.getTitle();
+
+        //Then
+        Assert.assertEquals(expectedTitle, "My Account");
     }
 }

@@ -3,7 +3,7 @@
 <suite name="ECommerceSuite">
     <test name="ECommerceTests">
         <classes>
-            <class name="org.example.selenium.LoginPageTest"/>
+            <class name="org.example.selenium.LoginTest"/>
         </classes>
     </test>
 </suite>
