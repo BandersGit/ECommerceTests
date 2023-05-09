@@ -5,9 +5,11 @@ import org.testng.annotations.Test;
 
 public class PurchaseTest extends BaseTest {
 
-    String searchTerm = "Sony VAIO";
+    //Temporary test
     @Test
     public void searchProduct() throws InterruptedException {
+        String searchTerm = "Sony VAIO";
+
         ProductPage productPage = landingPage.productSearch(searchTerm);
     }
 }
