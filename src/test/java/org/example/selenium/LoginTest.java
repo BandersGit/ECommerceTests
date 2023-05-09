@@ -3,7 +3,6 @@ package org.example.selenium;
 import org.example.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 public class LoginTest extends BaseTest {
 
@@ -28,6 +27,4 @@ public class LoginTest extends BaseTest {
     private static void assertPageTitleEqualsExpectedTitle(String expectedTitle) {
         Assert.assertEquals(expectedTitle, "My Account");
     }
-
-
 }

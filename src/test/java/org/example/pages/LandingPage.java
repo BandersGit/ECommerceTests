@@ -11,7 +11,6 @@ public class LandingPage extends BasePage {
 
     private final By loginPageLink = By.linkText("My account");
     private final By registerPageLink = By.linkText("Register");
-    private final By logOutSuccessPageLink = By.linkText("Logout");
     private final By searchBar = By.name("search");
     private By firstProduct;
 
@@ -24,11 +23,6 @@ public class LandingPage extends BasePage {
         hover(loginPageLink);
         click(registerPageLink);
         return new RegisterPage();
-    }
-
-    public LogOutSuccessPage followLinkToLogoutSucessPage(){
-        click(logOutSuccessPageLink);
-        return new LogOutSuccessPage();
     }
 
     public ProductPage productSearch(String input) throws InterruptedException {
