@@ -22,6 +22,12 @@ public class LoginTest extends BaseTest {
         String expectedTitle = driver.getTitle();
 
         //Then
+        assertPageTitleEqualsExpectedTitle(expectedTitle);
+    }
+
+    private static void assertPageTitleEqualsExpectedTitle(String expectedTitle) {
         Assert.assertEquals(expectedTitle, "My Account");
     }
+
+
 }
