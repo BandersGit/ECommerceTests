@@ -36,7 +36,8 @@ public class BasePage {
         return find(locator).getText();
     }
 
-    public void logout(){
+    public LogOutSuccessPage logout(){
         click(logOutSuccessPageLink);
+        return new LogOutSuccessPage();
     }
 }

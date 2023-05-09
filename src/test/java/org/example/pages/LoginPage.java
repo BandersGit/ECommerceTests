@@ -16,7 +16,8 @@ public class LoginPage extends BasePage{
         sendKeys(passwordInputField, password);
     }
 
-    public void clickLoginButton(){
+    public MyAccountPage clickLoginButton(){
         click(loginButton);
+        return new MyAccountPage();
     }
 }

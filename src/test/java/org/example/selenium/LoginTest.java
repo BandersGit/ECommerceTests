@@ -1,6 +1,7 @@
 package org.example.selenium;
 
 import org.example.pages.LoginPage;
+import org.example.pages.MyAccountPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,9 +17,9 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = landingPage.followLinkToLoginPage();
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
-        loginPage.clickLoginButton();
+        MyAccountPage myAccountPage = loginPage.clickLoginButton();
 
-        String expectedTitle = driver.getTitle();
+        String expectedTitle = myAccountPage.getTitle();
 
         //Then
         assertPageTitleEqualsExpectedTitle(expectedTitle);

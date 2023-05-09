@@ -1,7 +1,7 @@
 package org.example.selenium;
 
+import org.example.pages.LogOutSuccessPage;
 import org.example.pages.LoginPage;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,15 +18,15 @@ public class LogoutTest extends BaseTest {
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
         loginPage.clickLoginButton();
-        loginPage.logout();
+        LogOutSuccessPage logOutSuccessPage = loginPage.logout();
 
-        String logoutSuccessMessage = driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).getText();
+        String logoutSuccessText = logOutSuccessPage.getLogoutSuccessText();
 
         //Then
-        assertLogoutSuccessMessageIsDisplayed(logoutSuccessMessage);
+        assertLogoutSuccessTextIsDisplayed(logoutSuccessText);
     }
 
-    private static void assertLogoutSuccessMessageIsDisplayed(String logoutSuccessMessage) {
-        Assert.assertEquals(logoutSuccessMessage, "Account Logout");
+    private static void assertLogoutSuccessTextIsDisplayed(String logoutSuccessText) {
+        Assert.assertEquals(logoutSuccessText, "Account Logout");
     }
 }
