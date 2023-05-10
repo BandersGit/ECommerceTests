@@ -41,6 +41,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public void clickButtonContinue(){
+        hover(buttonContinue);
         click(buttonContinue);
     }
 
