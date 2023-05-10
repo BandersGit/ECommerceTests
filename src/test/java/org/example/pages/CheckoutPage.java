@@ -12,10 +12,15 @@ public class CheckoutPage extends BasePage {
     private final By checkAgreeTermsAndConditions = By.id("input-agree");
     private final By buttonContinue = By.id("button-save");
 
-    public void typeIntoFirstNameField(String input){
-        sendKeys(firstNameField, input);
+    public void typeIntoFirstNameField(String firstName){
+        sendKeys(firstNameField, firstName);
     }
-    //FORTSÄTT MED INPUTS HÄR
+    public void typeIntoLastNameField(String lastName) { sendKeys(lastNameField, lastName);}
+    public void typeIntoAddressOneField(String addressOne) { sendKeys(addressOneField, addressOne);}
+    public void typeIntoCityField(String cityName) { sendKeys(cityField, cityName);}
+    public void typePostCodeField(String postCode) { sendKeys(postCodeField, postCode);}
+
+
     public void clickCheckAgreeTermsAndConditions(){
         click(checkAgreeTermsAndConditions);
     }
