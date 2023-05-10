@@ -6,7 +6,7 @@ import org.example.pages.RegisterPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class RegisterPageTest extends BaseTest {
+public class RegisterTest extends BaseTest {
 
     @Test
     @QaseTitle("Register account with valid values")
