@@ -18,7 +18,7 @@ public class RegisterPageTest extends BaseTest {
         RegisterPage registerPage = landingPage.followLinkToRegisterPage();
         registerPage.enterFirstName(REGISTER_NUMBER_STRING);
         registerPage.enterLastName(REGISTER_NUMBER_STRING);
-        registerPage.enterEmail(REGISTER_NUMBER_STRING);
+        registerPage.enterEmail(email);
         registerPage.enterPhoneNumber(REGISTER_NUMBER_STRING);
         registerPage.enterPassword(REGISTER_NUMBER_STRING);
         registerPage.enterPasswordConfirm(REGISTER_NUMBER_STRING);

@@ -8,7 +8,7 @@ public class PurchaseTest extends BaseTest {
 
     //Temporary test
     @Test
-    public void logout_withValidProductAndValidAccountDetails_ShouldSucceed() throws InterruptedException {
+    public void checkOut_withValidProductAndValidAccountDetails_ShouldSucceed() throws InterruptedException {
 
         //Given
         String searchTerm = "Sony VAIO";
