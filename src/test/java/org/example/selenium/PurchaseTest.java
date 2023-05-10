@@ -1,5 +1,6 @@
 package org.example.selenium;
 
+import io.qase.api.annotation.QaseTitle;
 import io.qase.api.annotation.Step;
 import org.example.pages.BasePage;
 import org.example.pages.CheckoutConfirmPage;
@@ -12,6 +13,7 @@ public class PurchaseTest extends BaseTest {
 
     //Temporary test
     @Test
+    @QaseTitle("Purchase with Guest Checkout and valid customer details should succeed")
     public void checkOut_withValidProductAndValidAccountDetails_ShouldSucceed() throws InterruptedException {
         //Given
         String searchTerm = "Sony VAIO";
