@@ -25,7 +25,7 @@ public class PurchaseTest extends BaseTest {
         ProductPage productPage = landingPage.productSearch(searchTerm);
         CheckoutPage checkoutPage = productPage.clickBuyNowButton();
 
-        checkoutPage.pressGuestCheckoutButton();
+        checkoutPage.clickGuestCheckoutButton();
         checkoutPage.typeIntoFirstNameField(firstName);
         checkoutPage.typeIntoLastNameField(lastName);
         checkoutPage.typeIntoPaymentEmailField(email);
@@ -36,7 +36,7 @@ public class PurchaseTest extends BaseTest {
         checkoutPage.clickCheckAgreeTermsAndConditions();
 
 
-        checkoutPage.clickButtonContinue();
+        checkoutPage.clickContinueButton();
 
         //Then
     }

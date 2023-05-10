@@ -1,8 +1,6 @@
 package org.example.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,12 +16,12 @@ public class CheckoutPage extends BasePage {
     private final By cityField = By.id("input-payment-city");
     private final By postCodeField = By.id("input-payment-postcode");
     private final By checkAgreeTermsAndConditions = By.xpath("//*[@id=\"form-checkout\"]/div/div[2]/div/div[5]/label");
-    private final By buttonContinue = By.id("button-save");
+    private final By continueButton = By.id("button-save");
     private final By paymentEmailField = By.id("input-payment-email");
     private final By paymentTelephoneField = By.id("input-payment-telephone");
 
 
-    public void pressGuestCheckoutButton() {
+    public void clickGuestCheckoutButton() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(guestCheckoutButton));
         click(guestCheckoutButton);
     }
@@ -40,9 +38,9 @@ public class CheckoutPage extends BasePage {
         click(checkAgreeTermsAndConditions);
     }
 
-    public void clickButtonContinue(){
-        hover(buttonContinue);
-        click(buttonContinue);
+    public void clickContinueButton(){
+        moveToElementAndHover(continueButton);
+        click(continueButton);
     }
 
 }
