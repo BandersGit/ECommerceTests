@@ -36,9 +36,10 @@ public class CheckoutPage extends BasePage {
         click(checkAgreeTermsAndConditions);
     }
 
-    public void clickContinueButton(){
+    public CheckoutConfirmPage clickContinueButton(){
         moveToElementAndHover(continueButton);
         click(continueButton);
+        return new CheckoutConfirmPage();
     }
 
 }
