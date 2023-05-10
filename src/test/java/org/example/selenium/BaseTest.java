@@ -14,16 +14,14 @@ public class BaseTest {
     protected WebDriver driver;
     private final static String baseUrl = "https://ecommerce-playground.lambdatest.io/";
     protected static LandingPage landingPage;
-    protected static String REGISTER_NUMBER_STRING = generateRegisterNumber();
-
-
+    protected static String REGISTER_NUMBER_STRING = generateRegisterNumberString();
 
     @BeforeClass
     public void setup(){
         WebDriverManager.chromedriver().setup();
     }
 
-    public static String generateRegisterNumber(){
+    public static String generateRegisterNumberString(){
         int registerNumber = new Random().nextInt();
         return Integer.toString(Math.abs(registerNumber));
     }
@@ -33,7 +31,7 @@ public class BaseTest {
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(option);
-        driver.manage().window().maximize();
+        driver.manage().window().minimize();
         driver.get(baseUrl);
         landingPage = new LandingPage();
         landingPage.setDriver(driver);
@@ -41,6 +39,6 @@ public class BaseTest {
 
     @AfterTest
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 }

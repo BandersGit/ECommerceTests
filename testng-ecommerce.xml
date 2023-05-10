@@ -4,6 +4,9 @@
     <test name="ECommerceTests">
         <classes>
             <class name="org.example.selenium.LoginTest"/>
+            <class name="org.example.selenium.LogoutTest"/>
+            <class name="org.example.selenium.RegisterTest"/>
+            <class name="org.example.selenium.PurchaseTest"/>
         </classes>
     </test>
 </suite>

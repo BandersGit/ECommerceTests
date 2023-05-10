@@ -1,5 +1,7 @@
 package org.example.selenium;
 
+import io.qase.api.annotation.QaseTitle;
+import io.qase.api.annotation.Step;
 import org.example.pages.LogOutSuccessPage;
 import org.example.pages.LoginPage;
 import org.testng.Assert;
@@ -8,6 +10,7 @@ import org.testng.annotations.Test;
 public class LogoutTest extends BaseTest {
 
     @Test
+    @QaseTitle("Logout test should Logout when logged in")
     public void logout_whenLoggedIn_shouldLogout() {
         //Given
         String email = "a@b.cd";
@@ -26,6 +29,7 @@ public class LogoutTest extends BaseTest {
         assertLogoutSuccessTextIsDisplayed(logoutSuccessText);
     }
 
+    @Step("Verify Logout successful by asserting Displayed message equals expected message")
     private static void assertLogoutSuccessTextIsDisplayed(String logoutSuccessText) {
         Assert.assertEquals(logoutSuccessText, "Account Logout");
     }
