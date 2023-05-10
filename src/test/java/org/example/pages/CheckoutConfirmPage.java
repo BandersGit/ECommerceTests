@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 public class CheckoutConfirmPage extends BasePage {
     private final By confirmButton = By.id("button-confirm");
 
-    @Step("Click Continue button to move on to next page")
+    @Step("Click Confirm button to move on to next page")
     public void clickContinueButton(){
         moveToElementAndHover(confirmButton);
         click(confirmButton);
