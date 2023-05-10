@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 public class PurchaseTest extends BaseTest {
 
-    //Temporary test
     @Test
     @QaseTitle("Purchase with Guest Checkout and valid customer details should succeed")
     public void checkOut_withValidProductAndValidAccountDetails_ShouldSucceed() throws InterruptedException {
