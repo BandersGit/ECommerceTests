@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class ProductPage extends BasePage{
 
-    private final By buyNowButton = By.linkText("Buy now");
+    private final By buyNowButton = By.xpath("//*[@id=\"entry_216843\"]/button");
 
     @Step("Click Buy Now button")
     public CheckoutPage clickBuyNowButton(){
