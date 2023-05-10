@@ -14,16 +14,18 @@ public class BaseTest {
     protected WebDriver driver;
     private final static String baseUrl = "https://ecommerce-playground.lambdatest.io/";
     protected static LandingPage landingPage;
-    protected final static String REGISTER_NUMBER_STRING = generateRegisterNumber();
+    protected static String REGISTER_NUMBER_STRING = generateRegisterNumber();
+
+
 
     @BeforeClass
     public void setup(){
         WebDriverManager.chromedriver().setup();
     }
 
-    private static String generateRegisterNumber(){
+    public static String generateRegisterNumber(){
         int registerNumber = new Random().nextInt();
-        return Integer.toString(registerNumber);
+        return Integer.toString(Math.abs(registerNumber));
     }
 
     @BeforeMethod
