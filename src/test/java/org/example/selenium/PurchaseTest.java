@@ -13,20 +13,23 @@ public class PurchaseTest extends BaseTest {
         //Given
         String searchTerm = "Sony VAIO";
         String email = REGISTER_NUMBER_STRING + "@gmail.com";
-        //String firstName = REGISTER_NUMBER_STRING;
-        //String lastName = REGISTER_NUMBER_STRING;
-        //String addressOne = REGISTER_NUMBER_STRING;
-        //String cityName = REGISTER_NUMBER_STRING;
-        //String postCode = REGISTER_NUMBER_STRING;
+        String firstName = REGISTER_NUMBER_STRING;
+        String lastName = REGISTER_NUMBER_STRING;
+        String paymentTelephone = REGISTER_NUMBER_STRING;
+        String addressOne = REGISTER_NUMBER_STRING;
+        String cityName = REGISTER_NUMBER_STRING;
+        String postCode = REGISTER_NUMBER_STRING;
 
         //When
         ProductPage productPage = landingPage.productSearch(searchTerm);
         CheckoutPage checkoutPage = productPage.clickBuyNowButton();
-        checkoutPage.typeIntoFirstNameField(REGISTER_NUMBER_STRING);
-        checkoutPage.typeIntoLastNameField(REGISTER_NUMBER_STRING);
-        checkoutPage.typeIntoAddressOneField(REGISTER_NUMBER_STRING);
-        checkoutPage.typeIntoCityField(REGISTER_NUMBER_STRING);
-        checkoutPage.typePostCodeField(REGISTER_NUMBER_STRING);
+        checkoutPage.typeIntoFirstNameField(firstName);
+        checkoutPage.typeIntoLastNameField(lastName);
+        checkoutPage.typeIntoPaymentEmailField(email);
+        checkoutPage.typeIntoPaymentTelephoneField(paymentTelephone);
+        checkoutPage.typeIntoAddressOneField(addressOne);
+        checkoutPage.typeIntoCityField(cityName);
+        checkoutPage.typePostCodeField(postCode);
 
         //Then
     }
