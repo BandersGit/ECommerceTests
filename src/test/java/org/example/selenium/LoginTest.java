@@ -2,8 +2,8 @@ package org.example.selenium;
 
 import io.qase.api.annotation.QaseTitle;
 import io.qase.api.annotation.Step;
+import org.example.pages.BasePage;
 import org.example.pages.LoginPage;
-import org.example.pages.MyAccountPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,9 +20,9 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = landingPage.followLinkToLoginPage();
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
-        MyAccountPage myAccountPage = loginPage.clickLoginButton();
+        loginPage.clickLoginButton();
 
-        String expectedTitle = myAccountPage.getTitle();
+        String expectedTitle = BasePage.getTitle();
 
         //Then
         assertPageTitleEqualsExpectedTitle(expectedTitle);

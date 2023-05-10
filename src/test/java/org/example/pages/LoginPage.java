@@ -20,8 +20,7 @@ public class LoginPage extends BasePage{
     }
 
     @Step("Click the Login Button")
-    public MyAccountPage clickLoginButton(){
+    public void clickLoginButton(){
         click(loginButton);
-        return new MyAccountPage();
     }
 }

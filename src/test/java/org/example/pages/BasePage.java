@@ -40,7 +40,7 @@ public class BasePage {
         return find(locator).getText();
     }
 
-    public String getTitle(){
+    public static String getTitle(){
         return driver.getTitle();
     }
 

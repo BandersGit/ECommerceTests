@@ -34,10 +34,9 @@ public class PurchaseTest extends BaseTest {
         checkoutPage.typeIntoCityField(cityName);
         checkoutPage.typePostCodeField(postCode);
         checkoutPage.clickCheckAgreeTermsAndConditions();
-
-
         checkoutPage.clickContinueButton();
 
         //Then
+
     }
 }

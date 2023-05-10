@@ -8,7 +8,6 @@ import java.time.Duration;
 
 public class CheckoutPage extends BasePage {
 
-    //private final By guestCheckoutButton = By.id("input-account-guest");
     private final By guestCheckoutButton = By.xpath("//*[@id=\"form-checkout\"]/div/div[1]/div/div[1]/div/div[3]");
     private final By firstNameField = By.id("input-payment-firstname");
     private final By lastNameField = By.id("input-payment-lastname");
@@ -20,11 +19,11 @@ public class CheckoutPage extends BasePage {
     private final By paymentEmailField = By.id("input-payment-email");
     private final By paymentTelephoneField = By.id("input-payment-telephone");
 
-
     public void clickGuestCheckoutButton() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(guestCheckoutButton));
         click(guestCheckoutButton);
     }
+
     public void typeIntoFirstNameField(String firstName) { sendKeys(firstNameField, firstName);}
     public void typeIntoLastNameField(String lastName) { sendKeys(lastNameField, lastName);}
     public void typeIntoPaymentEmailField(String paymentEmail) {sendKeys(paymentEmailField, paymentEmail);}
@@ -32,7 +31,6 @@ public class CheckoutPage extends BasePage {
     public void typeIntoAddressOneField(String addressOne) { sendKeys(addressOneField, addressOne);}
     public void typeIntoCityField(String cityName) { sendKeys(cityField, cityName);}
     public void typePostCodeField(String postCode) { sendKeys(postCodeField, postCode);}
-
 
     public void clickCheckAgreeTermsAndConditions(){
         click(checkAgreeTermsAndConditions);
