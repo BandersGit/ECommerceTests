@@ -21,8 +21,11 @@ public class PurchaseTest extends BaseTest {
         String postCode = REGISTER_NUMBER_STRING;
 
         //When
+
         ProductPage productPage = landingPage.productSearch(searchTerm);
         CheckoutPage checkoutPage = productPage.clickBuyNowButton();
+
+        checkoutPage.pressGuestCheckoutButton();
         checkoutPage.typeIntoFirstNameField(firstName);
         checkoutPage.typeIntoLastNameField(lastName);
         checkoutPage.typeIntoPaymentEmailField(email);
@@ -30,6 +33,10 @@ public class PurchaseTest extends BaseTest {
         checkoutPage.typeIntoAddressOneField(addressOne);
         checkoutPage.typeIntoCityField(cityName);
         checkoutPage.typePostCodeField(postCode);
+        checkoutPage.clickCheckAgreeTermsAndConditions();
+
+
+        checkoutPage.clickButtonContinue();
 
         //Then
     }

@@ -2,11 +2,6 @@ package org.example.pages;
 
 import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class LandingPage extends BasePage {
 
@@ -23,7 +18,7 @@ public class LandingPage extends BasePage {
 
     @Step("Hover, click and follow link to Register Page")
     public RegisterPage followLinkToRegisterPage(){
-        hover(loginPageLink);
+        moveToElementAndHover(loginPageLink);
         click(registerPageLink);
         return new RegisterPage();
     }

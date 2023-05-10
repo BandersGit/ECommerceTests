@@ -26,7 +26,7 @@ public class BasePage {
         find(locator).click();
     }
 
-    protected void hover(By locator) {
+    protected void moveToElementAndHover(By locator) {
         WebElement webElement = find(locator);
         Actions action = new Actions(driver);
         action.moveToElement(webElement).perform();
