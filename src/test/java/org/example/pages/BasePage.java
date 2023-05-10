@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 public class BasePage {
     private final By logOutSuccessPageLink = By.linkText("Logout");
 
+    private final By landingPageLink = By.xpath("//*[@id=\"entry_217821\"]/figure/a");
+
     protected static WebDriver driver;
 
     public void setDriver(WebDriver driver){
@@ -44,5 +46,10 @@ public class BasePage {
     public LogOutSuccessPage logout(){
         click(logOutSuccessPageLink);
         return new LogOutSuccessPage();
+    }
+
+    public LandingPage goToLandingPage(){
+        click(landingPageLink);
+        return new LandingPage();
     }
 }

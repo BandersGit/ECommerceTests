@@ -16,8 +16,6 @@ public class BaseTest {
     protected static LandingPage landingPage;
     protected static String REGISTER_NUMBER_STRING = generateRegisterNumber();
 
-
-
     @BeforeClass
     public void setup(){
         WebDriverManager.chromedriver().setup();
