@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
 
 public class RegisterPage extends BasePage{
@@ -13,26 +14,32 @@ public class RegisterPage extends BasePage{
     private final By acceptPrivacyPolicySquare = By.xpath("//*[@id=\"content\"]/form/div/div/div/label");
     private final By continueButton = By.xpath("//*[@id=\"content\"]/form/div/div/input");
 
+    @Step("Type First Name {firstName} into input field")
     public void enterFirstName(String firstName){
         sendKeys(firstNameInputField, firstName);
     }
 
+    @Step("Type Last Name {lastName} into input field")
     public void enterLastName(String lastName){
         sendKeys(lastNameInputField, lastName);
     }
 
+    @Step("Type Email Adress {email} into input field")
     public void enterEmail(String email){
-        sendKeys(emailInputField, email + "@gmail.com");
+        sendKeys(emailInputField, email);
     }
 
+    @Step("Type Phone Number {phoneNumber} into input field")
     public void enterPhoneNumber(String phoneNumber){
         sendKeys(phoneNumberInputField, phoneNumber);
     }
 
+    @Step("Type Password {password} into input field")
     public void enterPassword(String password){
         sendKeys(passwordInputField, password);
     }
 
+    @Step("Type Password {firstName} into input field")
     public void enterPasswordConfirm(String passwordConfirm){
         sendKeys(passwordConfirmInputField, passwordConfirm);
     }
