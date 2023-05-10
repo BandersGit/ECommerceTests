@@ -28,7 +28,7 @@ public class LoginTest extends BaseTest {
         assertPageTitleEqualsExpectedTitle(expectedTitle);
     }
 
-    @Step("Assert Page Title is same as expected Title")
+    @Step("Verify Login successful by asserting Page Title matches expected Title {expectedTitle}")
     private static void assertPageTitleEqualsExpectedTitle(String expectedTitle) {
         Assert.assertEquals(expectedTitle, "My Account");
     }

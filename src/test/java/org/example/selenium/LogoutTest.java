@@ -29,7 +29,7 @@ public class LogoutTest extends BaseTest {
         assertLogoutSuccessTextIsDisplayed(logoutSuccessText);
     }
 
-    @Step("Assert Displayed message is the equals expected message")
+    @Step("Verify Logout successful by asserting Displayed message equals expected message")
     private static void assertLogoutSuccessTextIsDisplayed(String logoutSuccessText) {
         Assert.assertEquals(logoutSuccessText, "Account Logout");
     }
