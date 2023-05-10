@@ -18,8 +18,8 @@ public class PurchaseTest extends BaseTest {
 
         //When
         ProductPage productPage = landingPage.productSearch(searchTerm);
-        CheckoutPage checkoutPage = productPage.clickBuyNowButton();
 
+        CheckoutPage checkoutPage = productPage.clickBuyNowButton();
         checkoutPage.clickGuestCheckoutButton();
         checkoutPage.typeIntoFirstNameField(REGISTER_NUMBER_STRING);
         checkoutPage.typeIntoLastNameField(REGISTER_NUMBER_STRING);
