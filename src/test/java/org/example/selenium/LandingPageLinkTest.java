@@ -1,5 +1,6 @@
 package org.example.selenium;
 
+import io.qase.api.annotation.Step;
 import org.example.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -25,6 +26,7 @@ public class LandingPageLinkTest extends BaseTest{
         assertPageTitleEqualsExpectedTitle(expectedTitle);
     }
 
+    @Step("Assert Page Title is same as expected Title")
     private static void assertPageTitleEqualsExpectedTitle(String expectedTitle){
         Assert.assertEquals(expectedTitle, "Your Store");
     }

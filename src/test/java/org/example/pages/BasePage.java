@@ -50,6 +50,7 @@ public class BasePage {
         return new LogOutSuccessPage();
     }
 
+    @Step("Click Company Logo")
     public LandingPage goToLandingPage(){
         click(landingPageLink);
         return new LandingPage();

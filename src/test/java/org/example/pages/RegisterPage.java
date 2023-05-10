@@ -24,7 +24,7 @@ public class RegisterPage extends BasePage{
         sendKeys(lastNameInputField, lastName);
     }
 
-    @Step("Type Email Adress {email} into input field")
+    @Step("Type Email Address {email} into input field")
     public void enterEmail(String email){
         sendKeys(emailInputField, email);
     }
@@ -39,15 +39,17 @@ public class RegisterPage extends BasePage{
         sendKeys(passwordInputField, password);
     }
 
-    @Step("Type Password {firstName} into input field")
+    @Step("Type Password Confirmation {passwordConfirmation} into input field")
     public void enterPasswordConfirm(String passwordConfirm){
         sendKeys(passwordConfirmInputField, passwordConfirm);
     }
 
+    @Step("Click Accept Privacy Policy Button")
     public void clickAcceptPrivacyPolicySquare(){
         click(acceptPrivacyPolicySquare);
     }
 
+    @Step("Click Continue Button")
     public void clickContinueButton(){
         click(continueButton);
     }
