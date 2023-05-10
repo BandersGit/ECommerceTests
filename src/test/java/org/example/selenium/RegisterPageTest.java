@@ -1,6 +1,7 @@
 package org.example.selenium;
 
 import org.example.pages.RegisterPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegisterPageTest extends BaseTest {
@@ -8,7 +9,6 @@ public class RegisterPageTest extends BaseTest {
     @Test
     public void registerAccount_WhenInputValidValues_ShouldCreateAccount(){
         //Given
-
 
         //When
         RegisterPage registerPage = landingPage.followLinkToRegisterPage();
@@ -21,7 +21,13 @@ public class RegisterPageTest extends BaseTest {
         registerPage.clickAcceptPrivacyPolicySquare();
         registerPage.clickContinueButton();
 
-        //Then
+        String expectedTitle = registerPage.getTitle();
 
+        //Then
+        assertPageTitleEqualsExpectedTitle(expectedTitle);
+    }
+
+    private static void assertPageTitleEqualsExpectedTitle(String expectedTitle){
+        Assert.assertEquals(expectedTitle, "Your Account Has Been Created!");
     }
 }

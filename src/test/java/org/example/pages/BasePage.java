@@ -7,8 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 
 
 public class BasePage {
-    protected static WebDriver driver;
     private final By logOutSuccessPageLink = By.linkText("Logout");
+
+    protected static WebDriver driver;
 
     public void setDriver(WebDriver driver){
         this.driver = driver;
@@ -34,6 +35,10 @@ public class BasePage {
 
     protected String getText(By locator){
         return find(locator).getText();
+    }
+
+    public String getTitle(){
+        return driver.getTitle();
     }
 
     public LogOutSuccessPage logout(){

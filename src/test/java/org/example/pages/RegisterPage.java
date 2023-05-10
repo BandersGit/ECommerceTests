@@ -10,7 +10,7 @@ public class RegisterPage extends BasePage{
     private final By phoneNumberInputField = By.id("input-telephone");
     private final By passwordInputField = By.id("input-password");
     private final By passwordConfirmInputField = By.id("input-confirm");
-    private final By acceptPrivacyPolicySquare = By.className("agree");
+    private final By acceptPrivacyPolicySquare = By.xpath("//*[@id=\"content\"]/form/div/div/div/label");
     private final By continueButton = By.xpath("//*[@id=\"content\"]/form/div/div/input");
 
     public void enterFirstName(String firstName){
@@ -44,7 +44,5 @@ public class RegisterPage extends BasePage{
     public void clickContinueButton(){
         click(continueButton);
     }
-
-
 
 }
