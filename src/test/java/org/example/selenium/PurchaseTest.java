@@ -34,7 +34,7 @@ public class PurchaseTest extends BaseTest {
         CheckoutConfirmPage checkoutConfirmPage = checkoutPage.clickContinueButton();
         Thread.sleep(2000);
         checkoutConfirmPage.clickContinueButton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         String expectedTitle = BasePage.getTitle();
 
         //Then

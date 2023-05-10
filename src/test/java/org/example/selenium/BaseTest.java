@@ -37,8 +37,8 @@ public class BaseTest {
         landingPage.setDriver(driver);
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 }
