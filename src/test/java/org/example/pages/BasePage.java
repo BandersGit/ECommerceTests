@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,6 +44,7 @@ public class BasePage {
         return driver.getTitle();
     }
 
+    @Step("Click the Logout Button")
     public LogOutSuccessPage logout(){
         click(logOutSuccessPageLink);
         return new LogOutSuccessPage();
