@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,11 +20,13 @@ public class CheckoutPage extends BasePage {
     private final By paymentEmailField = By.id("input-payment-email");
     private final By paymentTelephoneField = By.id("input-payment-telephone");
 
+    @Step("Click guest checkout radio button")
     public void clickGuestCheckoutButton() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(guestCheckoutButton));
         click(guestCheckoutButton);
     }
 
+    @Step("Fill in obligatory information")
     public void typeIntoFirstNameField(String firstName) { sendKeys(firstNameField, firstName);}
     public void typeIntoLastNameField(String lastName) { sendKeys(lastNameField, lastName);}
     public void typeIntoPaymentEmailField(String paymentEmail) {sendKeys(paymentEmailField, paymentEmail);}
@@ -32,10 +35,12 @@ public class CheckoutPage extends BasePage {
     public void typeIntoCityField(String cityName) { sendKeys(cityField, cityName);}
     public void typePostCodeField(String postCode) { sendKeys(postCodeField, postCode);}
 
+    @Step("Click Agree terms & conditions checkbox")
     public void clickCheckAgreeTermsAndConditions(){
         click(checkAgreeTermsAndConditions);
     }
 
+    @Step("Click Continue button to move on to next page")
     public CheckoutConfirmPage clickContinueButton(){
         moveToElementAndHover(continueButton);
         click(continueButton);
