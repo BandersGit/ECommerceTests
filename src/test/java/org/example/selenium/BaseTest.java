@@ -31,7 +31,7 @@ public class BaseTest {
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(option);
-        driver.manage().window().minimize();
+        driver.manage().window().maximize();
         driver.get(baseUrl);
         landingPage = new LandingPage();
         landingPage.setDriver(driver);
@@ -39,6 +39,6 @@ public class BaseTest {
 
     @AfterTest
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 }
