@@ -15,7 +15,7 @@ public class BasePage {
     protected static WebDriver driver;
 
     public void setDriver(WebDriver driver){
-        this.driver = driver;
+        BasePage.driver = driver;
     }
 
     protected WebElement find(By locator){
@@ -40,7 +40,7 @@ public class BasePage {
         return find(locator).getText();
     }
 
-    public static String getTitle(){
+    public String getTitle(){
         return driver.getTitle();
     }
 

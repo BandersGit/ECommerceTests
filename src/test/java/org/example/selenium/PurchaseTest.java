@@ -2,7 +2,6 @@ package org.example.selenium;
 
 import io.qase.api.annotation.QaseTitle;
 import io.qase.api.annotation.Step;
-import org.example.pages.BasePage;
 import org.example.pages.CheckoutConfirmPage;
 import org.example.pages.CheckoutPage;
 import org.example.pages.ProductPage;
@@ -36,7 +35,7 @@ public class PurchaseTest extends BaseTest {
         Thread.sleep(2000);
         checkoutConfirmPage.clickConfirmButton();
         Thread.sleep(1000);
-        String expectedTitle = BasePage.getTitle();
+        String expectedTitle = checkoutConfirmPage.getTitle();
 
         //Then
         assertPageTitleEqualsExpectedTitle(expectedTitle);
